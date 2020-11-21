@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="imlab"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="clang"/>
+		<Option virtualFolders="CMake Files\;CMake Files\vendor\;CMake Files\vendor\gtm\;CMake Files\vendor\gtm\tmp\;CMake Files\vendor\gflags\;CMake Files\vendor\gflags\tmp\;CMake Files\vendor\cpplint\;CMake Files\vendor\cpplint\tmp\;CMake Files\include\;CMake Files\src\;CMake Files\test\;CMake Files\tools\;CMake Files\tools\schemac\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_tools">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint_tools"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imlabdb">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/imlabdb" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 imlabdb"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imlabdb/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/imlabdb" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 imlabdb/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_schemac">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint_schemac"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester_schema">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tester_schema" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 tester_schema"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester_schema/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tester_schema" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 tester_schema/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="googletest">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 googletest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gmock_src">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 gmock_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gflags_src">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 gflags_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 tester"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tester/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tester" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 tester/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="schemac">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/schemac" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 schemac"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="schemac/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/schemac" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 schemac/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="schemac_parser">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 schemac_parser"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_include">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint_include"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="schema">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/libschema.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 schema"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="schema/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/libschema.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 schema/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_test">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint_test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imlab">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/libimlab.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 imlab"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="imlab/fast">
+				<Option output="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/libimlab.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="clang"/>
+				<Compiler>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include"/>
+					<Add directory="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 imlab/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpplint_src">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 cpplint_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="gtest_src">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 gtest_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lint_src">
+				<Option working_dir="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 lint_src"/>
+					<CompileFile command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/database.cc">
+			<Option target="imlab"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/infra/types.cc">
+			<Option target="imlab"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/data.cc">
+			<Option target="tester"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/database_test.cc">
+			<Option target="tester"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/tester.cc">
+			<Option target="tester"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/imlabdb.cc">
+			<Option target="imlabdb"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_parser.cc">
+			<Option target="schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_parser.h">
+			<Option target="schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_scanner.cc">
+			<Option target="schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_compiler.cc">
+			<Option target="schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_parse_context.cc">
+			<Option target="schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schemac.cc">
+			<Option target="schemac"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/tester.cc">
+			<Option target="tester_schema"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/cpplint.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/googletest.cmake">
+			<Option virtualFolder="CMake Files\vendor\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/tmp/gmock_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/tmp/googletest-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/tmp/gtest_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gtm\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/tmp/gflags_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\gflags\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/cpplint/tmp/cpplint_src-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\vendor\cpplint\tmp\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include/local.cmake">
+			<Option virtualFolder="CMake Files\include\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/local.cmake">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/local.cmake">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/local.cmake">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/local.cmake">
+			<Option virtualFolder="CMake Files\tools\schemac\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

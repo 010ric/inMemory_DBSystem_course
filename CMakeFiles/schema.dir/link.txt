@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libschema.a  CMakeFiles/schema.dir/tools/schemac/gen/schema_scanner.cc.o CMakeFiles/schema.dir/tools/schemac/gen/schema_parser.cc.o CMakeFiles/schema.dir/tools/schemac/schema_compiler.cc.o CMakeFiles/schema.dir/tools/schemac/schema_parse_context.cc.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libschema.a

@@ -1,0 +1,1141 @@
+State 15 conflicts: 1 shift/reduce
+State 36 conflicts: 1 shift/reduce
+State 42 conflicts: 1 shift/reduce
+
+
+Grammar
+
+    0 $accept: schema_statement_list "eof"
+
+    1 schema_statement_list: schema_declaration
+    2                      | %empty
+
+    3 schema_declaration: schema_declaration parse_table
+    4                   | schema_declaration parse_index
+    5                   | parse_index
+    6                   | parse_table
+
+    7 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    8            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    9            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   11            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   12            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+   15 index_type: "kSTLUnorderedMap"
+   16           | "kSTLMap"
+   17           | "btree_map"
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   19            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+   22 column_declaration_list: column_declaration_list "comma" column_declaration
+   23                        | column_declaration
+   24                        | "primary" "key" "left_round_brackets" primary_key_list "right_round_brackets"
+   25                        | %empty
+
+   26 column_declaration: "identifier" column_type "not null" "comma"
+   27                   | "identifier" column_type "not null"
+
+   28 primary_key_list: primary_key_list "comma" column_declaration
+   29                 | column_declaration
+   30                 | %empty
+
+   31 column_type: "integer"
+   32            | "char" "left_curly_brackets" "integer_value" "right_curly_brackets"
+   33            | "varchar" "left_curly_brackets" "integer_value" "right_curly_brackets"
+   34            | "numeric" "left_curly_brackets" "integer_value" "comma" "integer_value" "right_curly_brackets"
+   35            | "timestamp"
+
+
+Terminals, with rules where they appear
+
+    "eof" (0) 0
+    error (256)
+    "integer_value" <int> (258) 32 33 34
+    "identifier" <std::string> (259) 7 8 9 10 11 12 13 14 18 19 20 21 26 27
+    "kSTLUnorderedMap" (260) 15
+    "kSTLMap" (261) 16
+    "btree_map" (262) 17
+    "left_curly_brackets" (263) 32 33 34
+    "left_round_brackets" (264) 7 8 9 10 11 12 13 14 18 19 20 21 24
+    "right_curly_brackets" (265) 32 33 34
+    "right_round_brackets" (266) 7 8 9 10 11 12 13 14 18 19 20 21 24
+    "double_quotes" (267) 8 10 12 14 19 21
+    "semicolon" (268) 7 8 9 10 11 12 13 14 18 19 20 21
+    "comma" (269) 22 26 28 34
+    "integer" (270) 31
+    "char" (271) 32
+    "varchar" (272) 33
+    "numeric" (273) 34
+    "timestamp" (274) 35
+    "not null" (275) 26 27
+    "index" (276) 18 19 20 21
+    "table" (277) 7 8 9 10 11 12 13 14
+    "create" (278) 7 8 9 10 11 12 13 14 18 19 20 21
+    "primary" (279) 11 12 13 14 24
+    "key" (280) 11 12 13 14 24
+    "on" (281) 18 19 20 21
+    "with" (282) 9 10 13 14 20 21
+    "equals" (283) 9 10 13 14 20 21
+
+
+Nonterminals, with rules where they appear
+
+    $accept (29)
+        on left: 0
+    schema_statement_list (30)
+        on left: 1 2
+        on right: 0
+    schema_declaration <imlab::schemac::Schema> (31)
+        on left: 3 4 5 6
+        on right: 1 3 4
+    parse_table <imlab::schemac::Table> (32)
+        on left: 7 8 9 10 11 12 13 14
+        on right: 3 6
+    index_type <imlab::schemac::IndexType> (33)
+        on left: 15 16 17
+        on right: 9 10 13 14 20 21
+    parse_index <imlab::schemac::Index> (34)
+        on left: 18 19 20 21
+        on right: 4 5
+    column_declaration_list <std::vector<imlab::schemac::Column>> (35)
+        on left: 22 23 24 25
+        on right: 7 8 9 10 11 12 13 14 18 19 20 21 22
+    column_declaration <imlab::schemac::Column> (36)
+        on left: 26 27
+        on right: 22 23 28 29
+    primary_key_list <std::vector<imlab::schemac::Column>> (37)
+        on left: 28 29 30
+        on right: 11 12 13 14 24 28
+    column_type <imlab::schemac::Type> (38)
+        on left: 31 32 33 34 35
+        on right: 26 27
+
+
+State 0
+
+    0 $accept: . schema_statement_list "eof"
+
+    "create"  shift, and go to state 1
+
+    $default  reduce using rule 2 (schema_statement_list)
+
+    schema_statement_list  go to state 2
+    schema_declaration     go to state 3
+    parse_table            go to state 4
+    parse_index            go to state 5
+
+
+State 1
+
+    7 parse_table: "create" . "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    8            | "create" . "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    9            | "create" . "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   10            | "create" . "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   11            | "create" . "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   12            | "create" . "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" . "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   14            | "create" . "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   18 parse_index: "create" . "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   19            | "create" . "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" . "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   21            | "create" . "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "index"  shift, and go to state 6
+    "table"  shift, and go to state 7
+
+
+State 2
+
+    0 $accept: schema_statement_list . "eof"
+
+    "eof"  shift, and go to state 8
+
+
+State 3
+
+    1 schema_statement_list: schema_declaration .
+    3 schema_declaration: schema_declaration . parse_table
+    4                   | schema_declaration . parse_index
+
+    "create"  shift, and go to state 1
+
+    $default  reduce using rule 1 (schema_statement_list)
+
+    parse_table  go to state 9
+    parse_index  go to state 10
+
+
+State 4
+
+    6 schema_declaration: parse_table .
+
+    $default  reduce using rule 6 (schema_declaration)
+
+
+State 5
+
+    5 schema_declaration: parse_index .
+
+    $default  reduce using rule 5 (schema_declaration)
+
+
+State 6
+
+   18 parse_index: "create" "index" . "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   19            | "create" "index" . "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" . "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   21            | "create" "index" . "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 11
+
+
+State 7
+
+    7 parse_table: "create" "table" . "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    8            | "create" "table" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    9            | "create" "table" . "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   10            | "create" "table" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   11            | "create" "table" . "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   12            | "create" "table" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" . "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   14            | "create" "table" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"     shift, and go to state 12
+    "double_quotes"  shift, and go to state 13
+
+
+State 8
+
+    0 $accept: schema_statement_list "eof" .
+
+    $default  accept
+
+
+State 9
+
+    3 schema_declaration: schema_declaration parse_table .
+
+    $default  reduce using rule 3 (schema_declaration)
+
+
+State 10
+
+    4 schema_declaration: schema_declaration parse_index .
+
+    $default  reduce using rule 4 (schema_declaration)
+
+
+State 11
+
+   18 parse_index: "create" "index" "identifier" . "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   19            | "create" "index" "identifier" . "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" . "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   21            | "create" "index" "identifier" . "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "on"  shift, and go to state 14
+
+
+State 12
+
+    7 parse_table: "create" "table" "identifier" . "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+    9            | "create" "table" "identifier" . "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   11            | "create" "table" "identifier" . "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" . "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "left_round_brackets"  shift, and go to state 15
+
+
+State 13
+
+    8 parse_table: "create" "table" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   12            | "create" "table" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 16
+
+
+State 14
+
+   18 parse_index: "create" "index" "identifier" "on" . "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   19            | "create" "index" "identifier" "on" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" "on" . "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   21            | "create" "index" "identifier" "on" . "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"     shift, and go to state 17
+    "double_quotes"  shift, and go to state 18
+
+
+State 15
+
+    7 parse_table: "create" "table" "identifier" "left_round_brackets" . column_declaration_list "right_round_brackets" "semicolon"
+    9            | "create" "table" "identifier" "left_round_brackets" . column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   11            | "create" "table" "identifier" "left_round_brackets" . column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" . column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "identifier"  shift, and go to state 19
+    "primary"     shift, and go to state 20
+
+    "primary"  [reduce using rule 25 (column_declaration_list)]
+    $default   reduce using rule 25 (column_declaration_list)
+
+    column_declaration_list  go to state 21
+    column_declaration       go to state 22
+
+
+State 16
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   12            | "create" "table" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "double_quotes"  shift, and go to state 23
+
+
+State 17
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" . "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" "on" "identifier" . "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 24
+
+
+State 18
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" . "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 25
+
+
+State 19
+
+   26 column_declaration: "identifier" . column_type "not null" "comma"
+   27                   | "identifier" . column_type "not null"
+
+    "integer"    shift, and go to state 26
+    "char"       shift, and go to state 27
+    "varchar"    shift, and go to state 28
+    "numeric"    shift, and go to state 29
+    "timestamp"  shift, and go to state 30
+
+    column_type  go to state 31
+
+
+State 20
+
+   24 column_declaration_list: "primary" . "key" "left_round_brackets" primary_key_list "right_round_brackets"
+
+    "key"  shift, and go to state 32
+
+
+State 21
+
+    7 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list . "right_round_brackets" "semicolon"
+    9            | "create" "table" "identifier" "left_round_brackets" column_declaration_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   11            | "create" "table" "identifier" "left_round_brackets" column_declaration_list . "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list . "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   22 column_declaration_list: column_declaration_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 33
+    "comma"                 shift, and go to state 34
+    "primary"               shift, and go to state 35
+
+
+State 22
+
+   23 column_declaration_list: column_declaration .
+
+    $default  reduce using rule 23 (column_declaration_list)
+
+
+State 23
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   12            | "create" "table" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 36
+
+
+State 24
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" . column_declaration_list "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" "on" "identifier" "left_round_brackets" . column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 19
+    "primary"     shift, and go to state 20
+
+    $default  reduce using rule 25 (column_declaration_list)
+
+    column_declaration_list  go to state 37
+    column_declaration       go to state 22
+
+
+State 25
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" . "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "double_quotes"  shift, and go to state 38
+
+
+State 26
+
+   31 column_type: "integer" .
+
+    $default  reduce using rule 31 (column_type)
+
+
+State 27
+
+   32 column_type: "char" . "left_curly_brackets" "integer_value" "right_curly_brackets"
+
+    "left_curly_brackets"  shift, and go to state 39
+
+
+State 28
+
+   33 column_type: "varchar" . "left_curly_brackets" "integer_value" "right_curly_brackets"
+
+    "left_curly_brackets"  shift, and go to state 40
+
+
+State 29
+
+   34 column_type: "numeric" . "left_curly_brackets" "integer_value" "comma" "integer_value" "right_curly_brackets"
+
+    "left_curly_brackets"  shift, and go to state 41
+
+
+State 30
+
+   35 column_type: "timestamp" .
+
+    $default  reduce using rule 35 (column_type)
+
+
+State 31
+
+   26 column_declaration: "identifier" column_type . "not null" "comma"
+   27                   | "identifier" column_type . "not null"
+
+    "not null"  shift, and go to state 42
+
+
+State 32
+
+   24 column_declaration_list: "primary" "key" . "left_round_brackets" primary_key_list "right_round_brackets"
+
+    "left_round_brackets"  shift, and go to state 43
+
+
+State 33
+
+    7 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" . "semicolon"
+    9            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "semicolon"  shift, and go to state 44
+    "with"       shift, and go to state 45
+
+
+State 34
+
+   22 column_declaration_list: column_declaration_list "comma" . column_declaration
+
+    "identifier"  shift, and go to state 19
+
+    column_declaration  go to state 46
+
+
+State 35
+
+   11 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" . "key" primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" . "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "key"  shift, and go to state 47
+
+
+State 36
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   12            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 19
+    "primary"     shift, and go to state 20
+
+    "primary"  [reduce using rule 25 (column_declaration_list)]
+    $default   reduce using rule 25 (column_declaration_list)
+
+    column_declaration_list  go to state 48
+    column_declaration       go to state 22
+
+
+State 37
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list . "right_round_brackets" "semicolon"
+   20            | "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   22 column_declaration_list: column_declaration_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 49
+    "comma"                 shift, and go to state 34
+
+
+State 38
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" . "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 50
+
+
+State 39
+
+   32 column_type: "char" "left_curly_brackets" . "integer_value" "right_curly_brackets"
+
+    "integer_value"  shift, and go to state 51
+
+
+State 40
+
+   33 column_type: "varchar" "left_curly_brackets" . "integer_value" "right_curly_brackets"
+
+    "integer_value"  shift, and go to state 52
+
+
+State 41
+
+   34 column_type: "numeric" "left_curly_brackets" . "integer_value" "comma" "integer_value" "right_curly_brackets"
+
+    "integer_value"  shift, and go to state 53
+
+
+State 42
+
+   26 column_declaration: "identifier" column_type "not null" . "comma"
+   27                   | "identifier" column_type "not null" .
+
+    "comma"  shift, and go to state 54
+
+    "comma"   [reduce using rule 27 (column_declaration)]
+    $default  reduce using rule 27 (column_declaration)
+
+
+State 43
+
+   24 column_declaration_list: "primary" "key" "left_round_brackets" . primary_key_list "right_round_brackets"
+
+    "identifier"  shift, and go to state 19
+
+    $default  reduce using rule 30 (primary_key_list)
+
+    column_declaration  go to state 55
+    primary_key_list    go to state 56
+
+
+State 44
+
+    7 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 7 (parse_table)
+
+
+State 45
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "left_round_brackets"  shift, and go to state 57
+
+
+State 46
+
+   22 column_declaration_list: column_declaration_list "comma" column_declaration .
+
+    $default  reduce using rule 22 (column_declaration_list)
+
+
+State 47
+
+   11 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" . primary_key_list "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" . primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "identifier"  shift, and go to state 19
+
+    $default  reduce using rule 30 (primary_key_list)
+
+    column_declaration  go to state 55
+    primary_key_list    go to state 58
+
+
+State 48
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "right_round_brackets" "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   12            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "primary" "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   22 column_declaration_list: column_declaration_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 59
+    "comma"                 shift, and go to state 34
+    "primary"               shift, and go to state 60
+
+
+State 49
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" . "semicolon"
+   20            | "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "semicolon"  shift, and go to state 61
+    "with"       shift, and go to state 62
+
+
+State 50
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "right_round_brackets" "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" . column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 19
+    "primary"     shift, and go to state 20
+
+    $default  reduce using rule 25 (column_declaration_list)
+
+    column_declaration_list  go to state 63
+    column_declaration       go to state 22
+
+
+State 51
+
+   32 column_type: "char" "left_curly_brackets" "integer_value" . "right_curly_brackets"
+
+    "right_curly_brackets"  shift, and go to state 64
+
+
+State 52
+
+   33 column_type: "varchar" "left_curly_brackets" "integer_value" . "right_curly_brackets"
+
+    "right_curly_brackets"  shift, and go to state 65
+
+
+State 53
+
+   34 column_type: "numeric" "left_curly_brackets" "integer_value" . "comma" "integer_value" "right_curly_brackets"
+
+    "comma"  shift, and go to state 66
+
+
+State 54
+
+   26 column_declaration: "identifier" column_type "not null" "comma" .
+
+    $default  reduce using rule 26 (column_declaration)
+
+
+State 55
+
+   29 primary_key_list: column_declaration .
+
+    $default  reduce using rule 29 (primary_key_list)
+
+
+State 56
+
+   24 column_declaration_list: "primary" "key" "left_round_brackets" primary_key_list . "right_round_brackets"
+   28 primary_key_list: primary_key_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 67
+    "comma"                 shift, and go to state 68
+
+
+State 57
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "identifier"  shift, and go to state 69
+
+
+State 58
+
+   11 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list . "right_round_brackets" "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+   28 primary_key_list: primary_key_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 70
+    "comma"                 shift, and go to state 68
+
+
+State 59
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" . "semicolon"
+   10            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "semicolon"  shift, and go to state 71
+    "with"       shift, and go to state 72
+
+
+State 60
+
+   12 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" . "key" primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" . "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "key"  shift, and go to state 73
+
+
+State 61
+
+   18 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 18 (parse_index)
+
+
+State 62
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 74
+
+
+State 63
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "right_round_brackets" "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   22 column_declaration_list: column_declaration_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 75
+    "comma"                 shift, and go to state 34
+
+
+State 64
+
+   32 column_type: "char" "left_curly_brackets" "integer_value" "right_curly_brackets" .
+
+    $default  reduce using rule 32 (column_type)
+
+
+State 65
+
+   33 column_type: "varchar" "left_curly_brackets" "integer_value" "right_curly_brackets" .
+
+    $default  reduce using rule 33 (column_type)
+
+
+State 66
+
+   34 column_type: "numeric" "left_curly_brackets" "integer_value" "comma" . "integer_value" "right_curly_brackets"
+
+    "integer_value"  shift, and go to state 76
+
+
+State 67
+
+   24 column_declaration_list: "primary" "key" "left_round_brackets" primary_key_list "right_round_brackets" .
+
+    $default  reduce using rule 24 (column_declaration_list)
+
+
+State 68
+
+   28 primary_key_list: primary_key_list "comma" . column_declaration
+
+    "identifier"  shift, and go to state 19
+
+    column_declaration  go to state 77
+
+
+State 69
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "right_round_brackets" "semicolon"
+
+    "equals"  shift, and go to state 78
+
+
+State 70
+
+   11 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" . "semicolon"
+   13            | "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "semicolon"  shift, and go to state 79
+    "with"       shift, and go to state 80
+
+
+State 71
+
+    8 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 8 (parse_table)
+
+
+State 72
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 81
+
+
+State 73
+
+   12 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" . primary_key_list "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" . primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 19
+
+    $default  reduce using rule 30 (primary_key_list)
+
+    column_declaration  go to state 55
+    primary_key_list    go to state 82
+
+
+State 74
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 83
+
+
+State 75
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" . "semicolon"
+   21            | "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "semicolon"  shift, and go to state 84
+    "with"       shift, and go to state 85
+
+
+State 76
+
+   34 column_type: "numeric" "left_curly_brackets" "integer_value" "comma" "integer_value" . "right_curly_brackets"
+
+    "right_curly_brackets"  shift, and go to state 86
+
+
+State 77
+
+   28 primary_key_list: primary_key_list "comma" column_declaration .
+
+    $default  reduce using rule 28 (primary_key_list)
+
+
+State 78
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "right_round_brackets" "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 90
+
+
+State 79
+
+   11 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 11 (parse_table)
+
+
+State 80
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "left_round_brackets"  shift, and go to state 91
+
+
+State 81
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 92
+
+
+State 82
+
+   12 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list . "right_round_brackets" "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list . "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+   28 primary_key_list: primary_key_list . "comma" column_declaration
+
+    "right_round_brackets"  shift, and go to state 93
+    "comma"                 shift, and go to state 68
+
+
+State 83
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "semicolon"
+
+    "equals"  shift, and go to state 94
+
+
+State 84
+
+   19 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 19 (parse_index)
+
+
+State 85
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 95
+
+
+State 86
+
+   34 column_type: "numeric" "left_curly_brackets" "integer_value" "comma" "integer_value" "right_curly_brackets" .
+
+    $default  reduce using rule 34 (column_type)
+
+
+State 87
+
+   15 index_type: "kSTLUnorderedMap" .
+
+    $default  reduce using rule 15 (index_type)
+
+
+State 88
+
+   16 index_type: "kSTLMap" .
+
+    $default  reduce using rule 16 (index_type)
+
+
+State 89
+
+   17 index_type: "btree_map" .
+
+    $default  reduce using rule 17 (index_type)
+
+
+State 90
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "right_round_brackets" "semicolon"
+
+    "right_round_brackets"  shift, and go to state 96
+
+
+State 91
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "right_round_brackets" "semicolon"
+
+    "identifier"  shift, and go to state 97
+
+
+State 92
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "semicolon"
+
+    "equals"  shift, and go to state 98
+
+
+State 93
+
+   12 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" . "semicolon"
+   14            | "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" . "with" "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "semicolon"  shift, and go to state 99
+    "with"       shift, and go to state 100
+
+
+State 94
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 101
+
+
+State 95
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 102
+
+
+State 96
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" . "semicolon"
+
+    "semicolon"  shift, and go to state 103
+
+
+State 97
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "right_round_brackets" "semicolon"
+
+    "equals"  shift, and go to state 104
+
+
+State 98
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 105
+
+
+State 99
+
+   12 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 12 (parse_table)
+
+
+State 100
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" . "left_round_brackets" "identifier" "equals" index_type "semicolon"
+
+    "left_round_brackets"  shift, and go to state 106
+
+
+State 101
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "semicolon"
+
+    "semicolon"  shift, and go to state 107
+
+
+State 102
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "semicolon"
+
+    "equals"  shift, and go to state 108
+
+
+State 103
+
+    9 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 9 (parse_table)
+
+
+State 104
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "right_round_brackets" "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 109
+
+
+State 105
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "semicolon"
+
+    "semicolon"  shift, and go to state 110
+
+
+State 106
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" . "identifier" "equals" index_type "semicolon"
+
+    "identifier"  shift, and go to state 111
+
+
+State 107
+
+   20 parse_index: "create" "index" "identifier" "on" "identifier" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon" .
+
+    $default  reduce using rule 20 (parse_index)
+
+
+State 108
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 112
+
+
+State 109
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "right_round_brackets" "semicolon"
+
+    "right_round_brackets"  shift, and go to state 113
+
+
+State 110
+
+   10 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon" .
+
+    $default  reduce using rule 10 (parse_table)
+
+
+State 111
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" . "equals" index_type "semicolon"
+
+    "equals"  shift, and go to state 114
+
+
+State 112
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "semicolon"
+
+    "semicolon"  shift, and go to state 115
+
+
+State 113
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" . "semicolon"
+
+    "semicolon"  shift, and go to state 116
+
+
+State 114
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" . index_type "semicolon"
+
+    "kSTLUnorderedMap"  shift, and go to state 87
+    "kSTLMap"           shift, and go to state 88
+    "btree_map"         shift, and go to state 89
+
+    index_type  go to state 117
+
+
+State 115
+
+   21 parse_index: "create" "index" "identifier" "on" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon" .
+
+    $default  reduce using rule 21 (parse_index)
+
+
+State 116
+
+   13 parse_table: "create" "table" "identifier" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "right_round_brackets" "semicolon" .
+
+    $default  reduce using rule 13 (parse_table)
+
+
+State 117
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type . "semicolon"
+
+    "semicolon"  shift, and go to state 118
+
+
+State 118
+
+   14 parse_table: "create" "table" "double_quotes" "identifier" "double_quotes" "left_round_brackets" column_declaration_list "primary" "key" primary_key_list "right_round_brackets" "with" "left_round_brackets" "identifier" "equals" index_type "semicolon" .
+
+    $default  reduce using rule 14 (parse_table)

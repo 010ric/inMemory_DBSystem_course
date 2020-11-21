@@ -1,0 +1,13 @@
+# Target labels
+ googletest
+# Source files and their labels
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest-complete.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-install.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-mkdir.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-download.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-update.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-patch.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-configure.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-build.rule

@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/tester_schema.dir/tools/schemac/tester.cc.o  -o tester_schema libschema.a vendor/gflags/lib/libgflags.a vendor/gtm/gtest/lib/libgtest.a vendor/gtm/gmock/lib/libgmock.a 

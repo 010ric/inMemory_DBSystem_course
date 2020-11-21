@@ -1,0 +1,12 @@
+/private/var/folders/rs/ghbmg3r95zzbtf7h1fnsfkq40000gn/T/AppTranslocation/CE20581F-54F8-485D-BEF8-D93475B77B16/d/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks
+-- [IMLAB] settings
+--     GFLAGS_INCLUDE_DIR          = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include
+--     GFLAGS_LIBRARY_PATH         = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/lib/libgflags.a
+-- [TEST] settings
+--     GTEST_INCLUDE_DIR           = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include
+--     GTEST_LIBRARY_PATH          = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/lib/libgtest.a
+--     GMOCK_INCLUDE_DIR           = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include
+--     GMOCK_LIBRARY_PATH          = /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/lib/libgmock.a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks

@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/imlabdb.dir/tools/imlabdb.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/imlabdb.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/imlabdb.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/tester_schema.dir/tools/schemac/tester.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/tester.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/tester.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/tester.dir/test/tester.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/tester.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/tester.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/tester.dir/test/data.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/data.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/data.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/tester.dir/test/database_test.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/database_test.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/test/database_test.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/schemac.dir/tools/schemac/schemac.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schemac.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schemac.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/schema.dir/tools/schemac/gen/schema_scanner.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_scanner.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_scanner.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/schema.dir/tools/schemac/gen/schema_parser.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_parser.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/gen/schema_parser.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/schema.dir/tools/schemac/schema_compiler.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_compiler.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_compiler.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/schema.dir/tools/schemac/schema_parse_context.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_parse_context.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/tools/schemac/schema_parse_context.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/imlab.dir/src/database.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/database.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/database.cc"
+},
+{
+  "directory": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gtest/include -I/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/gmock/include -isystem /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gflags/include  -g -O0 -fsanitize=address -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++1z -o CMakeFiles/imlab.dir/src/infra/types.cc.o -c /Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/infra/types.cc",
+  "file": "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/src/infra/types.cc"
+}
+]

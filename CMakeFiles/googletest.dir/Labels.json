@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/googletest-stamp/googletest-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}

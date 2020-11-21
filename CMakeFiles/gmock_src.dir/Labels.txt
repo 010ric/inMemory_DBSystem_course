@@ -1,0 +1,13 @@
+# Target labels
+ gmock_src
+# Source files and their labels
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gmock_src
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gmock_src.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gmock_src-complete.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-install.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-mkdir.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-download.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-update.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-patch.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-configure.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gmock_src-stamp/gmock_src-build.rule

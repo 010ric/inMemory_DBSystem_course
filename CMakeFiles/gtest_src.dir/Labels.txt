@@ -1,0 +1,13 @@
+# Target labels
+ gtest_src
+# Source files and their labels
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gtest_src
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gtest_src.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/CMakeFiles/gtest_src-complete.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-install.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-mkdir.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-download.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-update.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-patch.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-configure.rule
+/Users/mturic/global/privat/studium/Informatik/Semester5/cppPraktikum/tasks/vendor/gtm/src/gtest_src-stamp/gtest_src-build.rule
